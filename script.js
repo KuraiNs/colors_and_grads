@@ -37,12 +37,41 @@ function popColor() {
     }
 }
 
-function validateInput() {
+const hex_symbols = [
+    '0', '1', '2', '3',
+    '4', '5', '6', '7',
+    '8', '9', 'a', 'b',
+    'c', 'd', 'e', 'f'
+];
 
+function validateInput(string_input) {
+    if (string_input.length != 7)
+        return false;
+    if (string_input[0] != '#')
+        return false;
+    for (let s of string_input.slice(1)) {
+        let hit = false;
+        for (let h of hex_symbols) {
+            if (s === h) {
+                hit = true;
+                break;
+            }
+        }
+        // simply returning `hit` is bad
+        // because we will return `true`
+        // after at least one hit
+        if (hit == false) {
+            return false;
+        }
+    }
+    return true;
 }
 
 function newColor() {
     const input_value = document.getElementById('new-color').value;
+    if (!validateInput(input_value)) {
+        return;
+    }
 
     const new_p = document.createElement('p');
     new_p.innerHTML = input_value;
