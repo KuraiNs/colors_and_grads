@@ -37,7 +37,8 @@ body {
 
 #hex-holder {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
+  justify-content: space-between;
+  grid-template-columns: 95px 95px 95px 95px;
 }
 
 .hex-color {
