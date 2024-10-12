@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(135deg, #141414, #181818, #151515, #111111);
+  height: 1vh;
+}
+
+#grad {
+  background-image: linear-gradient(135deg, #c58fff, red);
+}
+.hex-color {
+  display: inline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #181818;
+}
+
+#hex-holder {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#pop-color {
+    width: 80px;
+}
+
+#new-color {
+    width: 300px;
+}
+
