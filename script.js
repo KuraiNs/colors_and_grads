@@ -28,6 +28,7 @@ function popColor() {
     let pre_pop = document.getElementById('hex-holder').lastElementChild;
     if (pre_pop != null) {
         pre_pop.remove();
+        setGradColors();
     } else {
         let pop_button = document.getElementById('pop-color');
         pop_button.style.backgroundColor = "#ff8888"
@@ -86,6 +87,7 @@ document.getElementById('new-color')
         if (event.key === "Enter") {
             newColor();
             setHexColors();
+            setGradColors();
         }
     });
 
