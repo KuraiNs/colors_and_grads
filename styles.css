@@ -10,8 +10,8 @@ body {
 
 #div-center {
   position: absolute;
-  /* left: 50%;
-  translate: -50%; */
+  left: 50%;
+  translate: -50%;
 }
 
 #buttons {
