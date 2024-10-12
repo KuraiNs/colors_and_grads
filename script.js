@@ -18,15 +18,10 @@ function setGradColors() {
     let colors = document.querySelectorAll('.hex-color');
 
     let text_colors = "";
-    for (let i = 0; i < colors.length - 2; i++) {
-        text_colors += colors[i].innerHTML + ", ";
+    for (let i = 0; i < colors.length - 1; i++) {
+        text_colors += ", " + colors[i].innerHTML;
     }
-    // avoid trailing comma
-    text_colors += colors[colors.length - 1].innerHTML
-
-    grad.style.background =
-        "linear-gradient(135deg, "
-        + text_colors + ")";
+    grad.style.background = "linear-gradient(135deg" + text_colors + ")";
 }
 
 function popColor() {
@@ -40,6 +35,10 @@ function popColor() {
             pop_button.style.backgroundColor = '';
         }, 1000);
     }
+}
+
+function validateInput() {
+
 }
 
 function newColor() {
