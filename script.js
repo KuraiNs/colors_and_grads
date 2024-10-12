@@ -30,12 +30,10 @@ function setGradColors() {
 }
 
 function popColor() {
-    const colors = document.querySelectorAll('.hex-color');
-    if (colors.length > 0) {
-        const pop_temp = colors[colors.length - 1];
-        pop_temp.parentNode.removeChild(pop_temp);
-    }
-    else {
+    let pre_pop = document.getElementById('hex-holder').lastElementChild;
+    if (pre_pop != null) {
+        pre_pop.remove();
+    } else {
         let pop_button = document.getElementById('pop-color');
         pop_button.style.backgroundColor = "#ff8888"
         setTimeout(() => {
@@ -49,6 +47,7 @@ function newColor() {
 
     const new_p = document.createElement('p');
     new_p.innerHTML = input_value;
+    new_p.classList.add('hex-color');
 
     const p_list = document.getElementById('hex-holder')
     p_list.appendChild(new_p);
@@ -58,6 +57,7 @@ document.getElementById('new-color')
     .addEventListener('keydown', (event) => {
         if (event.key === "Enter") {
             newColor();
+            setHexColors();
         }
     });
 
