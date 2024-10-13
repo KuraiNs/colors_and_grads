@@ -3,7 +3,7 @@
 window.onload = () => {
     setHexColors();
     setGradColors();
-};
+}; 
 
 
 function setHexColors() {
@@ -70,12 +70,12 @@ function validateInput(string_input) {
 
 function newColor() {
     const input_value = document.getElementById('new-color').value;
-    if (!validateInput(input_value)) {
+    if (!validateInput(input_value.toLowerCase())) {
         return;
     }
 
     const new_p = document.createElement('p');
-    new_p.innerHTML = input_value;
+    new_p.innerHTML = input_value.toLowerCase();
     new_p.classList.add('hex-color');
 
     const p_list = document.getElementById('hex-holder')

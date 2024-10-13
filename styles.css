@@ -3,10 +3,6 @@
   font-weight: bold;
 }
 
-#top-message {
-  color: #fefefe; /* Replace with your desired color */
-}
-
 #top-message p {
   width: 400px;        /* Sets the width of the paragraph */
   margin: 0 auto;      /* Centers the paragraph horizontally */
@@ -58,5 +54,10 @@ body {
   height: 22px;
   border-radius: 5px;
   text-align: center;
-  color: #181818;
+  color: #fefefe;
+    text-shadow: 
+        -0.5px -0.5px 0 #413e3e, /* Top-left shadow */
+        1px -1px 0 #413e3e,   /* Top-right shadow */
+        -1px 1px 0 #413e3e,   /* Bottom-left shadow */
+        0.5px 0.5px 0 #413e3e;    /* Bottom-right shadow */
 }
