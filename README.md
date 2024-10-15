@@ -18,7 +18,7 @@
 ### Design
 
 - [x] Add title above all
-- [ ] Increase readability of some colors
+- [X] Increase readability of some colors
 
 ### Input
 
