@@ -18,7 +18,7 @@ function setGradColors() {
     let colors = document.querySelectorAll('.hex-color');
 
     let text_colors = "";
-    for (let i = 0; i < colors.length - 1; i++) {
+    for (let i = 0; i < colors.length; i++) {
         text_colors += ", " + colors[i].innerHTML;
     }
     grad.style.background = "linear-gradient(135deg" + text_colors + ")";
