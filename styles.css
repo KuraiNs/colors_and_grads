@@ -56,8 +56,8 @@ body {
   text-align: center;
   color: #fefefe;
     text-shadow: 
-        -0.5px -0.5px 0 #413e3e, /* Top-left shadow */
-        1px -1px 0 #413e3e,   /* Top-right shadow */
-        -1px 1px 0 #413e3e,   /* Bottom-left shadow */
-        0.5px 0.5px 0 #413e3e;    /* Bottom-right shadow */
+        -1px -1px 0 #080808, /* Top-left shadow */
+        1px -1px 0 #080808,   /* Top-right shadow */
+        -1px 1px 0 #080808,   /* Bottom-left shadow */
+        1px 1px 0 #080808;    /* Bottom-right shadow */
 }
