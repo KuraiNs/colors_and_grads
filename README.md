@@ -26,7 +26,7 @@
 
 - [X] Swap to simple color when 1 hex left and use transparent when 0
 
-- [ ] Add padding to allow [1-6] symbols instead will be padded with zeroes: `#f => #f00000`
+- [X] Add padding to allow [1-6] symbols instead will be padded with zeroes: `#f => #f00000`
 
 - [X] Make starting `#` optional
 

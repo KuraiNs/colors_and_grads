@@ -43,27 +43,36 @@ function popColor() {
 }
 
 function validateInput(string_input) {
-    const hexPattern = /^#?[0-9a-fA-F]{6}$/;
+    const hexPattern = /^#?[0-9a-fA-F]{1,6}$/;
     return hexPattern.test(string_input);
+}
+
+function padHexColor(hex) {
+    let hexValue = hex.startsWith('#') ? hex.slice(1) : hex;
+
+    while (hexValue.length < 6) {
+        hexValue += '0';
+    }
+
+    return `#${hexValue}`;
 }
 
 function newColor() {
     let input_value = document.getElementById('new-color').value;
-    
+
     if (!validateInput(input_value)) {
         return;
     }
 
-    if (input_value[0] !== '#') {
-        input_value = '#' + input_value;
-    }
+    input_value = padHexColor(input_value.toLowerCase());
 
     const new_p = document.createElement('p');
-    new_p.innerHTML = input_value.toLowerCase();
+    new_p.innerHTML = input_value;
     new_p.classList.add('hex-color');
 
     const p_list = document.getElementById('hex-holder');
     p_list.appendChild(new_p);
+
 
     setHexColors();
     setGradColors();
@@ -75,5 +84,3 @@ document.getElementById('new-color')
             newColor();
         }
     });
-
-
