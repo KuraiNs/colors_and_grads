@@ -4,7 +4,7 @@
 
 <a
     href="https://lagmaker.github.io/colors_and_grads/">
-<img src="assets/colors_preview.png"
+<img src="assets/NotPreview.png/"
     alt="Website preview"
     style="width: 80%;">
 </a>
