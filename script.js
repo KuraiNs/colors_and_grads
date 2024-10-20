@@ -14,15 +14,23 @@ function setHexColors() {
 }
 
 function setGradColors() {
-    let grad = document.getElementById('grad');
-    let colors = document.querySelectorAll('.hex-color');
-
-    let text_colors = "";
-    for (let i = 0; i < colors.length; i++) {
-        text_colors += ", " + colors[i].innerHTML;
+    const colors = document.getElementsByClassName('hex-color');
+    const grad = document.getElementById('grad');
+    
+    if (colors.length === 0) {
+        grad.style.background = 'transparent';
+    } else if (colors.length === 1) {
+        grad.style.background = colors[0].innerHTML;
+    } else {
+        let text_colors = "";
+        for (let i = 0; i < colors.length; i++) {
+            text_colors += ", " + colors[i].innerHTML;
+        }
+        grad.style.background = "linear-gradient(135deg" + text_colors + ")";
     }
-    grad.style.background = "linear-gradient(135deg" + text_colors + ")";
 }
+
+
 
 function popColor() {
     let pre_pop = document.getElementById('hex-holder').lastElementChild;
@@ -38,39 +46,15 @@ function popColor() {
     }
 }
 
-const hex_symbols = [
-    '0', '1', '2', '3',
-    '4', '5', '6', '7',
-    '8', '9', 'a', 'b',
-    'c', 'd', 'e', 'f'
-];
-
 function validateInput(string_input) {
-    if (string_input.length != 7)
-        return false;
-    if (string_input[0] != '#')
-        return false;
-    for (let s of string_input.slice(1)) {
-        let hit = false;
-        for (let h of hex_symbols) {
-            if (s === h) {
-                hit = true;
-                break;
-            }
-        }
-        // simply returning `hit` is bad
-        // because we will return `true`
-        // after at least one hit
-        if (hit == false) {
-            return false;
-        }
-    }
-    return true;
+    const hexPattern = /^#[0-9a-fA-F]{6}$/; 
+    return hexPattern.test(string_input);
 }
+
 
 function newColor() {
     const input_value = document.getElementById('new-color').value;
-    if (!validateInput(input_value.toLowerCase())) {
+    if (!validateInput(input_value)) {
         return;
     }
 

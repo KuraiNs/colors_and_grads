@@ -11,7 +11,7 @@
 
 ## BUGs
 
-- [ ] When `≤2` colors
+- [X] When `≤2` colors
 
 ## Near Future
 
@@ -22,9 +22,9 @@
 
 ### Input
 
-- [ ] Support Lower and Uppercase
+- [X] Support Lower and Uppercase
 
-- [ ] Swap to simple color when 1 hex left and use transparent when 0
+- [X] Swap to simple color when 1 hex left and use transparent when 0
 
 - [ ] Add padding to allow [1-6] symbols instead will be padded with zeroes: `#f => #f00000`
 
@@ -34,7 +34,7 @@
 
 ### Questionable !?
 
-- [ ] Fix grid elements gap
+- [X] Fix grid elements gap
 
 - [ ] Add refresh button
 
