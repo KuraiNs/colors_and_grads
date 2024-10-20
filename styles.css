@@ -4,14 +4,13 @@
 }
 
 #top-message p {
-  width: 400px;        /* Sets the width of the paragraph */
-  margin: 0 auto;      /* Centers the paragraph horizontally */
-  text-align: center;  /* Aligns the text within the paragraph to the center */
+  width: 400px;        
+  margin: 0 auto;      
+  text-align: center;  
 }
 
 body {
-  background: linear-gradient(135deg, #141414, #181818, #151515, #111111);
-  height: 1vh;
+  background: #141414;
 }
 
 #div-center {

@@ -1,10 +1,8 @@
 
-
 window.onload = () => {
     setHexColors();
     setGradColors();
 }; 
-
 
 function setHexColors() {
     let colors = document.querySelectorAll('.hex-color');
@@ -30,8 +28,6 @@ function setGradColors() {
     }
 }
 
-
-
 function popColor() {
     let pre_pop = document.getElementById('hex-holder').lastElementChild;
     if (pre_pop != null) {
@@ -47,33 +43,37 @@ function popColor() {
 }
 
 function validateInput(string_input) {
-    const hexPattern = /^#[0-9a-fA-F]{6}$/; 
+    const hexPattern = /^#?[0-9a-fA-F]{6}$/;
     return hexPattern.test(string_input);
 }
 
-
 function newColor() {
-    const input_value = document.getElementById('new-color').value;
+    let input_value = document.getElementById('new-color').value;
+    
     if (!validateInput(input_value)) {
         return;
+    }
+
+    if (input_value[0] !== '#') {
+        input_value = '#' + input_value;
     }
 
     const new_p = document.createElement('p');
     new_p.innerHTML = input_value.toLowerCase();
     new_p.classList.add('hex-color');
 
-    const p_list = document.getElementById('hex-holder')
+    const p_list = document.getElementById('hex-holder');
     p_list.appendChild(new_p);
+
+    setHexColors();
+    setGradColors();
 }
 
 document.getElementById('new-color')
     .addEventListener('keydown', (event) => {
         if (event.key === "Enter") {
             newColor();
-            setHexColors();
-            setGradColors();
         }
     });
-
 
 

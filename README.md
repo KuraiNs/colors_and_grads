@@ -28,7 +28,7 @@
 
 - [ ] Add padding to allow [1-6] symbols instead will be padded with zeroes: `#f => #f00000`
 
-- [ ] Make starting `#` optional
+- [X] Make starting `#` optional
 
 - [ ] Add multiple colors at once by separation them with `;`
 
