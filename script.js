@@ -1,4 +1,3 @@
-
 window.onload = () => {
     setHexColors();
     setGradColors();
@@ -59,20 +58,23 @@ function padHexColor(hex) {
 
 function newColor() {
     let input_value = document.getElementById('new-color').value;
+    let input_values = input_value.split(';');
 
-    if (!validateInput(input_value)) {
-        return;
+    for (let value of input_values) {
+        value = value.trim();
+        if (!validateInput(value)) {
+            continue;
+        }
+
+        value = padHexColor(value.toLowerCase());
+
+        const new_p = document.createElement('p');
+        new_p.innerHTML = value;
+        new_p.classList.add('hex-color');
+
+        const p_list = document.getElementById('hex-holder');
+        p_list.appendChild(new_p);
     }
-
-    input_value = padHexColor(input_value.toLowerCase());
-
-    const new_p = document.createElement('p');
-    new_p.innerHTML = input_value;
-    new_p.classList.add('hex-color');
-
-    const p_list = document.getElementById('hex-holder');
-    p_list.appendChild(new_p);
-
 
     setHexColors();
     setGradColors();

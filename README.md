@@ -30,7 +30,7 @@
 
 - [X] Make starting `#` optional
 
-- [ ] Add multiple colors at once by separation them with `;`
+- [X] Add multiple colors at once by separation them with `;`
 
 ### Questionable !?
 
