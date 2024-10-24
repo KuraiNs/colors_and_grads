@@ -42,10 +42,10 @@
 
 - [ ] Add support for json from web
 
-- [ ] Delete colors interactively
+- [X] Delete colors interactively
 
 - [ ] Support not only hex
 
-- [ ] Change rotation of gradient
+- [X] Change rotation of gradient
 
 - [ ] Gradient animation
