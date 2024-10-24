@@ -10,13 +10,13 @@
 }
 
 body {
-  background: #141414;
+  background: #141414; 
 }
 
 #div-center {
   position: absolute;
   left: 50%;
-  translate: -50%;
+  translate: -50%;     
 }
 
 #buttons {
@@ -28,23 +28,19 @@ body {
   margin-bottom: 15px;
 }
 
-#pop-color {
-  width: 80px;
-}
-
 #new-color {
-  width: 300px;
+  width: 300px;        
 }
 
 #grad {
-  background-image: linear-gradient(135deg, #c58fff, red);
+  background: linear-gradient(135deg, #c58fff, red); 
 }
 
 #hex-holder {
   display: grid;
   margin-top: 10px;
   justify-content: space-between;
-  grid-template-columns: 95px 95px 95px 95px;
+  grid-template-columns: 95px 95px 95px 95px; 
 }
 
 .hex-color {
@@ -53,10 +49,10 @@ body {
   height: 22px;
   border-radius: 5px;
   text-align: center;
-  color: #fefefe;
-    text-shadow: 
-        -1px -1px 0 #080808, /* Top-left shadow */
-        1px -1px 0 #080808,   /* Top-right shadow */
-        -1px 1px 0 #080808,   /* Bottom-left shadow */
-        1px 1px 0 #080808;    /* Bottom-right shadow */
+  color: #fefefe; 
+  text-shadow: 
+        -1px -1px 0 #080808, 
+        1px -1px 0 #080808,   
+        -1px 1px 0 #080808,   
+        1px 1px 0 #080808;    
 }
